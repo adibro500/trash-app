@@ -1,0 +1,9 @@
+<ActionBar title="Details" class="action-bar"></ActionBar>
+<FlexboxLayout flexDirection="column" class="page">
+    <FlexboxLayout class="m-15">
+        <Label class="h2" [text]="items[0].tournament_name"></Label>
+    </FlexboxLayout>
+    <Label class="h4" [text]="items[0].tournament_name"></Label>
+</FlexboxLayout>
+<StackLayout><Button class="btn btn-primary w-full btn_primo" text="Participate in this tournament" (tap)="participate()"></Button>
+</StackLayout>

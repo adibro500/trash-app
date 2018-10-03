@@ -1,0 +1,43 @@
+<ActionBar title="Player Registration" class="action-bar"></ActionBar>
+<!-- <StackLayout id="stlay"> -->
+<StackLayout verticalAlignment="center">
+  <StackLayout class="form" padding="15" backgroundColor="#FFFFFF">
+      <StackLayout class="input-field">
+          <Label text="First Name" class="label font-weight-bold m-b-5"></Label>
+          <TextField #first_namef="ngModel" class="input" [(ngModel)]="first_name" editable="true"></TextField>
+          <StackLayout class="hr-light"></StackLayout>
+      </StackLayout>
+      <StackLayout class="input-field">
+          <Label text="Last Name" class="label font-weight-bold m-b-5"></Label>
+          <TextField #last_namef="ngModel" class="input" [(ngModel)]="last_name" editable="true"></TextField>
+          <StackLayout class="hr-light"></StackLayout>
+      </StackLayout>
+      <StackLayout class="input-field">
+        <Label text="Gender" class="label font-weight-bold m-b-5"></Label>
+        <DropDown #dd
+          backroundColor="red"
+          [items]="items"
+          [(ngModel)]="selectedIndex"
+          (selectedIndexChanged)="onchange($event)"
+          (opened)="onopen()"
+          (closed)="onclose()"
+          row="0"
+          colSpan="2"></DropDown>
+      </StackLayout>
+      <StackLayout style="text-align:center" class="input-field">
+        <Label text="Select Country..." class="label font-weight-bold m-b-5"></Label>
+        <!-- <TextField class="input"></TextField> -->
+        <ListPicker [items]="countryList" selectedIndex="1" (selectedIndexChange)="selectedIndexChanged($event)" class="p-15"></ListPicker>
+        <StackLayout class="hr-light"></StackLayout>
+    </StackLayout>
+   
+      <!-- <StackLayout class="input-field">
+          <Label text="Password" class="label font-weight-bold m-b-5"></Label>
+          <TextField secure="true" class="input"></TextField>
+          <StackLayout class="hr-light"></StackLayout>
+      </StackLayout> -->
+      <Button [isUserInteractionEnabled]="" (tap)="submitPlayer()" class="btn btn-primary w-full btn_primo" text="Fill up address details"></Button>
+      <Label [nsRouterLink]="['/player-register-address']" text="Already a member? Login here." class="text-center footnote"></Label>
+  </StackLayout>
+<!-- </StackLayout> -->
+</StackLayout>

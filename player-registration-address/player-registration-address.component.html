@@ -1,0 +1,42 @@
+<ScrollView>
+<ActionBar title="Player Address Registration" class="action-bar"></ActionBar>
+<!-- <StackLayout id="stlay"> -->
+<StackLayout verticalAlignment="center">
+  <StackLayout class="form" padding="15" backgroundColor="#FFFFFF">
+      <StackLayout class="input-field">
+          <Label text="City" class="label font-weight-bold m-b-5"></Label>
+          <TextField class="input" [(ngModel)]="city"></TextField>
+          <StackLayout class="hr-light"></StackLayout>
+      </StackLayout>
+      <StackLayout class="input-field">
+        <Label text="State" class="label font-weight-bold m-b-5"></Label>
+        <TextField class="input" [(ngModel)]="state"></TextField>
+        <StackLayout class="hr-light"></StackLayout>
+    </StackLayout>
+    <StackLayout class="input-field">
+      <Label text="Postal Code" class="label font-weight-bold m-b-5"></Label>
+      <TextField class="input" [(ngModel)]="postal_code"></TextField>
+      <StackLayout class="hr-light"></StackLayout>
+    </StackLayout>
+    <StackLayout class="input-field">
+      <Label text="Company Name" class="label font-weight-bold m-b-5"></Label>
+      <TextField class="input" [(ngModel)]="company_name"></TextField>
+      <StackLayout class="hr-light"></StackLayout>
+    </StackLayout>
+    <StackLayout class="input-field">
+      <Label text="Address Line 1" class="label font-weight-bold m-b-5"></Label>
+      <TextField class="input" [(ngModel)]="address_line"></TextField>
+      <StackLayout class="hr-light"></StackLayout>
+    </StackLayout>
+    <StackLayout class="input-field">
+      <Label text="Address Line 2" class="label font-weight-bold m-b-5"></Label>
+      <TextField class="input" [(ngModel)]="address_line_1"></TextField>
+      <StackLayout class="hr-light"></StackLayout>
+    </StackLayout>
+  
+    <Button class="btn btn-primary w-full btn_primo" text="Fill up personal details" (tap)="submit()"></Button>
+    <Label [nsRouterLink]="['/registration']" text="Already a member? Login here." class="text-center footnote"></Label>
+  </StackLayout>
+</StackLayout>
+<!-- </StackLayout> -->
+</ScrollView>

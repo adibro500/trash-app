@@ -1,0 +1,31 @@
+<ScrollView>
+  <ActionBar title="Pick Email & Password" class="action-bar"></ActionBar>
+  <!-- <StackLayout id="stlay"> -->
+  <StackLayout verticalAlignment="center">
+    <StackLayout class="form" padding="15" backgroundColor="#FFFFFF">
+        <StackLayout class="input-field">
+            <Label text="Email" class="label font-weight-bold m-b-5"></Label>
+            <TextField class="input" [(ngModel)]="email"></TextField>
+            <StackLayout class="hr-light"></StackLayout>
+        </StackLayout>
+        <StackLayout class="input-field">
+          <Label text="Password" class="label font-weight-bold m-b-5"></Label>
+          <TextField class="input" [(ngModel)]="password"></TextField>
+          <StackLayout class="hr-light"></StackLayout>
+      </StackLayout>
+      <StackLayout class="input-field">
+        <Label text="Confirm Password" class="label font-weight-bold m-b-5"></Label>
+        <TextField class="input" [(ngModel)]="confirm_password"></TextField>
+        <StackLayout class="hr-light" style="text-align:center;color:red" *ngIf="!isValid">
+          <Label text="Passwords do not match!" class="label font-weight-bold m-b-5"></Label>
+        </StackLayout>
+      </StackLayout>
+    
+    
+      <Button class="btn btn-primary w-full btn_primo" text="Register" (tap)="submit()"></Button>
+      <!-- <Label [nsRouterLink]="['/cards']" text="Already a member? Login here." class="text-center footnote"></Label> -->
+    </StackLayout>
+  </StackLayout>
+  <!-- </StackLayout> -->
+  </ScrollView>
+  
